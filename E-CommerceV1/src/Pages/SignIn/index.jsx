@@ -1,10 +1,9 @@
+import Layout from '../../Components/Layout'
 function SignIn() {
-  
-
     return (
-      <>
-        <h1 className='font-bold underline'>Sign In</h1>
-      </>
+      <Layout>
+      sign in
+      </Layout>
     )
   }
   

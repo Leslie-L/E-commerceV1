@@ -1,10 +1,9 @@
+import Layout from "../../Components/Layout"
 function NotFound() {
-  
-
     return (
-      <>
-        <h1 className='font-bold underline'>NotFound</h1>
-      </>
+      <Layout>
+      Not Found
+      </Layout>
     )
   }
   

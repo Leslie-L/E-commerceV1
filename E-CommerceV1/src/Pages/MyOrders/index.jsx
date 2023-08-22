@@ -1,10 +1,9 @@
+import Layout from "../../Components/Layout"
 function MyOrders() {
-  
-
     return (
-      <>
-        <h1 className='font-bold underline'>MyOrders</h1>
-      </>
+      <Layout>
+      My orders
+    </Layout>
     )
   }
   

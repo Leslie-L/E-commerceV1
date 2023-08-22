@@ -1,10 +1,11 @@
+import Layout from "../../Components/Layout";
 function Home() {
   
 
   return (
-    <>
-      <h1 className='font-bold underline'>Home</h1>
-    </>
+    <Layout>
+      Home
+    </Layout>
   )
 }
 
