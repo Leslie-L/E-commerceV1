@@ -1,11 +1,28 @@
-import { createContext } from "react";
+import { createContext,useState } from "react";
 
-const ShoppingCartContext = createContext();
+export const ShoppingCartContext = createContext();
 
-export const ShoppingCartProvider = ({children}=>{
+export const ShoppingCartProvider = ({children}) => {
+    const [count, setCount] =useState(0)
+    const [isPDopen,setIsPDopen] =useState(false)
+    const [product,setProduct] = useState({})
+    const openDetail = ()=>{
+        setIsPDopen(true)
+    }
+    const closeDetail = ()=>{
+        setIsPDopen(false)
+    }
     return(
-        <ShoppingCartContext.Provider>
+        <ShoppingCartContext.Provider value={{
+            count,
+            setCount,
+            isPDopen,
+            openDetail,
+            closeDetail,
+            product,
+            setProduct
+        }}>
             {children}
         </ShoppingCartContext.Provider>
     )
-})
+}
