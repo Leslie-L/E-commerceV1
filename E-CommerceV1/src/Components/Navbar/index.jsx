@@ -6,6 +6,9 @@ import { useContext } from "react";
 function Navbar() {
     const activeStyle = 'underline underline-offset-4';
     const context =useContext(ShoppingCartContext);
+    const showCart= ()=>{
+        context.openCart()
+    }
     return(
         <nav className="flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 font-light bg-white shadow-md" >
             <ul className="flex items-center gap-3">
@@ -90,8 +93,8 @@ function Navbar() {
                         SignIn
                     </NavLink>
                 </li>
-                <li className="flex">
-                    <ShoppingCartIcon className="h-6 w-6 text-black"/>
+                <li className="flex" onClick={()=>showCart()}>
+                    <ShoppingCartIcon className="h-6 w-6 text-black" />
                     {context.count}
                 </li>
             </ul>

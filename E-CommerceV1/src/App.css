@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 5px; 
+    background-color: rgb(231, 231, 241);
+  }
+  
+  /* Estilo del thumb (el deslizador del scrollbar) */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0); /* Color del thumb */
+    border-radius: 10px; /* Radio de borde del thumb */
+}
