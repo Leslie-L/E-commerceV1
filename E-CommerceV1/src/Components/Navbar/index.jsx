@@ -15,7 +15,7 @@ function Navbar() {
                 <li className="font-semibold text-xl">
                     <NavLink
                         to='/'>
-                        Shop
+                        FakeShop
                     </NavLink>
                 </li>
                 <li>
@@ -28,10 +28,18 @@ function Navbar() {
                 </li>
                 <li>
                     <NavLink
-                        to='/clothes'
+                        to='/Men'
                         className={({isActivate})=>isActivate ? activeStyle : undefined}
                         >
-                        Clothes
+                        Men
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to='/women'
+                        className={({isActivate})=>isActivate ? activeStyle : undefined}
+                        >
+                        Women
                     </NavLink>
                 </li>
                 <li>
@@ -44,26 +52,10 @@ function Navbar() {
                 </li>
                 <li>
                     <NavLink
-                        to='/furnitures'
+                        to='/jewelery'
                         className={({isActivate})=>isActivate ? activeStyle : undefined}
                         >
-                        Furnitures
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink
-                        to='/toys'
-                        className={({isActivate})=>isActivate ? activeStyle : undefined}
-                        >
-                        Toys
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink
-                        to='/others'
-                        className={({isActivate})=>isActivate ? activeStyle : undefined}
-                        >
-                        Others
+                        Jewelery
                     </NavLink>
                 </li>
             </ul>

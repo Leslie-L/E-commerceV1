@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import {ShoppingCartContext} from '../../Context'
 import { XMarkIcon } from '@heroicons/react/24/solid'
-function CheckOutCart(parameters) {
+function CheckOutCart({props,last}) {
     const context = useContext(ShoppingCartContext);
-    const props=parameters['props'];
+    //const props=parameters['props'];
     const deletItemCart=(id)=>{
         const copy = [...context.cart];
         const index = copy.findIndex(item=>item.id==id);
@@ -37,17 +37,22 @@ function CheckOutCart(parameters) {
             <div className=' w-full flex flex-col'>
                 <p className='font-bold'>{props.title}</p>
                 <div className='flex justify-between'>
-                    <div className='flex items-center'>
+                    {last?'':<div className='flex items-center'>
                         <button className='w-6 h-6 bg-gray-300 rounded-l-md' onClick={()=>decrementItemCart(props.id)}>-</button>
                         <p className='border-black-100 px-1'>{props.cantidad}</p>
                         <button className='w-6 h-6 bg-gray-300 rounded-r-md'onClick={()=>incrementItemCart(props.id)}>+</button>
-                    </div>
+                    </div>}
+                    {
+                        last&&<p className='border-black-100 px-1'>Amount: {props.cantidad}</p>
+                    }
                     <p>Total: ${props.cantidad * props.price} </p>
                 </div>
             </div>
             <div>
-                <XMarkIcon className="h-4 w-4 text-gray" onClick={()=>deletItemCart(props.id)} />
-            </div>
+                {
+                    last?'':<XMarkIcon className="h-4 w-4 text-gray" onClick={()=>deletItemCart(props.id)} />
+                }
+                </div>
         </div>
     )
 }

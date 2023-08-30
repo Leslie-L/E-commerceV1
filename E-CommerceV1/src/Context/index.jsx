@@ -8,8 +8,10 @@ export const ShoppingCartProvider = ({children}) => {
     const [isCopen,setIsCopen] =useState(false)
     const [product,setProduct] = useState({})
     const [cart, setCart] = useState([])
+    const [orders,setOrders] = useState([])
 
     const openDetail = ()=>{
+        setIsCopen(false)
         setIsPDopen(true)
     }
     const closeDetail = ()=>{
@@ -18,6 +20,7 @@ export const ShoppingCartProvider = ({children}) => {
 
     const openCart = ()=>{
         setIsCopen(true)
+        setIsPDopen(false)
     }
     const closeCart = ()=>{
         setIsCopen(false)
@@ -37,7 +40,9 @@ export const ShoppingCartProvider = ({children}) => {
             setCart,
             isCopen,
             openCart,
-            closeCart
+            closeCart,
+            orders,
+            setOrders
         }}>
             {children}
         </ShoppingCartContext.Provider>
