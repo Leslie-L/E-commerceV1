@@ -5,7 +5,7 @@ import Home from './Home'
 import MyAccount from './MyAccount'
 import SignIn from './SignIn'
 import MyOrder from './MyOrder'
-import MyOrders from './MyOrder'
+import MyOrders from './MyOrders'
 import NotFound from './NotFound'
 import Navbar from '../Components/Navbar'
 
@@ -23,17 +23,18 @@ const AppRoute = () =>{
       element:<MyAccount/>
     },
     {
+      path:'/my-orders',
+      element:<MyOrders/>
+    },
+    {
       path:'/my-order/last',
       element:<MyOrder/>
     },
     {
-      path:'/my-order',
+      path:'/my-order/:id',
       element:<MyOrder/>
     },
-    {
-      path:'/my-orders',
-      element:<MyOrders/>
-    },
+    
     {
       path:'/sign-in',
       element:<SignIn/>

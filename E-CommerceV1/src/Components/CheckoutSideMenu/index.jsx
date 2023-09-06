@@ -8,8 +8,11 @@ function CheckoutSideMenu() {
     const context =useContext(ShoppingCartContext);
     const total = context.cart.reduce((prev,actual)=>prev+(actual.cantidad * actual.price),0)
     const handleOrder= ()=>{
+        const date = new Date()
+        const id = crypto.randomUUID();
         const actualOrder = {
-            'date':'05-08-2013',
+            id,
+            'date':date.toLocaleDateString(),
             'cart':context.cart,
             'total':total
         }
