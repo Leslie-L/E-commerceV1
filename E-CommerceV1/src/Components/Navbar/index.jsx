@@ -28,7 +28,7 @@ function Navbar() {
                 </li>
                 <li>
                     <NavLink
-                        to='/Men'
+                        to='/men'
                         className={({isActivate})=>isActivate ? activeStyle : undefined}
                         >
                         Men
