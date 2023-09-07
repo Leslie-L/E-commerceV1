@@ -19,7 +19,7 @@ function CheckoutSideMenu() {
         context.setOrders([...context.orders,actualOrder])
         context.setCount(0);
         context.setCart([])
-        constext.setSearchProduct('');
+        context.setSearchProduct('');
     }
     return(
         <aside className={`${context.isCopen ? 'flex' : 'hidden'} top-20 flex-col  fixed w-[360px] h-[calc(100vh-80px)] right-0 border bg-white rounded-lg`}>
