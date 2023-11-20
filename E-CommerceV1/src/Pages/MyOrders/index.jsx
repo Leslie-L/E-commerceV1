@@ -8,7 +8,7 @@ function MyOrders() {
 
     return (
       <Layout>
-        <h2 className="font-bold mb-4 text-lg">Order History</h2>
+        <h2 className="font-bold mb-4 text-lg pt-4">Order History</h2>
         <div>
           {context.orders.map((item,index)=>(
             <Link  key={item.id} to={`/my-order/${item.id}`}>

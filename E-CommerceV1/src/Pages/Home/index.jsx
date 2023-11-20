@@ -37,7 +37,7 @@ function Home() {
       </div>
       <div className="mb-4">
         <input type="text" name="" id="" 
-        className="w-80 h-8 rounded-md border-2 border-blue-200"
+        className="w-80 h-8 rounded-md border-2 border-blue-200 pl-2"
         placeholder="Search a product" 
         value={context.searchProduct}
         onChange={handleSearch}
