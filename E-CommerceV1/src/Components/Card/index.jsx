@@ -9,9 +9,9 @@ function Card(data) {
     }
     const addProduct= (prod,e) =>{
         e.stopPropagation();
-        context.setCount(context.count+1)
+        context.setCount(context.count+1);
+        context.controlNotification();
         const indexProd = context.cart.findIndex((item)=>item.id==prod.id)
-        console.log(indexProd)
         if(indexProd>=0){
             const news = [...context.cart];
             const item = {...news[indexProd]};
@@ -21,10 +21,7 @@ function Card(data) {
         }else{
             prod['cantidad']= 1;
             context.setCart([...context.cart,prod])
-
-
         }
-        console.log(context.cart)        
     }
     return(
         <div className="bg-white cursor-pointer w-56 h-60" onClick={()=>showProduct(data.data)}>

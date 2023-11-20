@@ -27,7 +27,12 @@ function Navbar() {
                 <li>
                     <NavLink
                         to='/'
-                        className={({isActivate})=>isActivate ? activeStyle : undefined}
+                        style={({ isActive}) => {
+                            if(isActive)
+                            return {
+                              'text-decoration': 'underline'
+                            };
+                          }}
                         >
                         All
                     </NavLink>
@@ -36,7 +41,12 @@ function Navbar() {
                 <li>
                     <NavLink
                         to='/men'
-                        className={({isActivate})=>isActivate ? activeStyle : undefined}
+                        style={({ isActive}) => {
+                            if(isActive)
+                            return {
+                              'text-decoration': 'underline'
+                            };
+                          }}
                         >
                         Men
                     </NavLink>
@@ -44,7 +54,12 @@ function Navbar() {
                 <li>
                     <NavLink
                         to='/women'
-                        className={({isActivate})=>isActivate ? activeStyle : undefined}
+                        style={({ isActive}) => {
+                            if(isActive)
+                            return {
+                              'text-decoration': 'underline'
+                            };
+                          }}
                         >
                         Women
                     </NavLink>
@@ -52,7 +67,12 @@ function Navbar() {
                 <li>
                     <NavLink
                         to='/electronics'
-                        className={({isActivate})=>isActivate ? activeStyle : undefined}
+                        style={({ isActive}) => {
+                            if(isActive)
+                            return {
+                              'text-decoration': 'underline'
+                            };
+                          }}
                         >
                         Electronics
                     </NavLink>
@@ -60,7 +80,12 @@ function Navbar() {
                 <li>
                     <NavLink
                         to='/jewelery'
-                        className={({isActivate})=>isActivate ? activeStyle : undefined}
+                        style={({ isActive}) => {
+                            if(isActive)
+                            return {
+                              'text-decoration': 'underline'
+                            };
+                          }}
                         >
                         Jewelery
                     </NavLink>
@@ -71,7 +96,12 @@ function Navbar() {
                 <li>
                     <NavLink
                         to='/my-orders'
-                        className={({isActivate})=>isActivate ? activeStyle : undefined}
+                        style={({ isActive}) => {
+                            if(isActive)
+                            return {
+                              'text-decoration': 'underline'
+                            };
+                          }}
                         >
                         My Orders
                     </NavLink>
