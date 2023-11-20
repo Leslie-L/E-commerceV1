@@ -22,7 +22,7 @@ function CheckoutSideMenu() {
         context.setSearchProduct('');
     }
     return(
-        <aside className={`${context.isCopen ? 'flex' : 'hidden'} top-20 flex-col  fixed w-[360px] h-[calc(100vh-80px)] right-0 border bg-white rounded-lg`}>
+        <aside className={`${context.isCopen ? 'flex' : 'hidden'} top-20 flex-col  fixed w-[320px] h-[calc(100vh-80px)] right-0 border bg-white rounded-lg`}>
             <div className="flex justify-between items-center p-3">
                 <h2>My Cart</h2>
                 <div>

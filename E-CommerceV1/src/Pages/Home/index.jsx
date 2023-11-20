@@ -30,17 +30,17 @@ function Home() {
   return (
     <Layout>
       <div className="w-full">
-        <h1 className="font-bold text-lg text-center">List of products</h1>
+        <h1 className="font-bold text-lg text-center pt-2">List of products</h1>
       </div>
       <div className="mb-4">
         <input type="text" name="" id="" 
-        className="w-80 h-8 rounded-md"
+        className="w-80 h-8 rounded-md border-2 border-blue-200"
         placeholder="Search a product" 
         value={context.searchProduct}
         onChange={handleSearch}
         />
       </div>
-      <section className="grid grid-cols-4 gap-4">
+      <section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {
           context.filteredItems.map((item)=>{
             if(category){
