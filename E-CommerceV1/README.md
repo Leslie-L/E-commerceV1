@@ -18,7 +18,7 @@ Welcome to the React Fake Store project built with Vite, React, Tailwind CSS, Re
 ## How to Use
 ```bash
 ##Clone the repository:
-git clone https://github.com/your-username/react-fake-store.git
+git clone https://github.com/Leslie-L/E-commerceV1/tree/main/E-CommerceV1.git
 ##Open the project folder:
 cd react-fake-store
 ##Install dependencies:
